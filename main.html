@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="header">
+			<div class="header-logo">
+				<svg width="45" height="45" viewBox="0 0 24 24">
+						    <path d="M5.109,8.392H4.249c-0.238,0-0.43,0.193-0.43,0.431c0,0.238,0.192,0.431,0.43,0.431h0.861c0.238,0,0.43-0.193,0.43-0.431C5.54,8.585,5.347,8.392,5.109,8.392 M4.249,4.088h11.19c0.238,0,0.431-0.192,0.431-0.43c0-0.238-0.192-0.431-0.431-0.431H4.249c-0.238,0-0.43,0.192-0.43,0.431C3.818,3.896,4.011,4.088,4.249,4.088 M2.527,5.81H17.16c0.238,0,0.431-0.192,0.431-0.43c0-0.238-0.192-0.431-0.431-0.431H2.527c-0.238,0-0.43,0.192-0.43,0.431C2.097,5.617,2.289,5.81,2.527,5.81 M18.452,6.67H1.236c-0.476,0-0.861,0.385-0.861,0.861v8.608c0,0.475,0.385,0.86,0.861,0.86h17.216c0.475,0,0.86-0.386,0.86-0.86V7.531C19.312,7.056,18.927,6.67,18.452,6.67 M1.666,7.531c0.238,0,0.431,0.192,0.431,0.431c0,0.238-0.192,0.43-0.431,0.43c-0.238,0-0.43-0.192-0.43-0.43C1.236,7.724,1.428,7.531,1.666,7.531 M1.666,16.14c-0.238,0-0.43-0.192-0.43-0.431c0-0.237,0.192-0.431,0.43-0.431c0.238,0,0.431,0.193,0.431,0.431C2.097,15.947,1.904,16.14,1.666,16.14 M18.021,16.14c-0.238,0-0.431-0.192-0.431-0.431c0-0.237,0.192-0.431,0.431-0.431s0.431,0.193,0.431,0.431C18.452,15.947,18.26,16.14,18.021,16.14 M18.452,14.496c-0.136-0.048-0.279-0.078-0.431-0.078c-0.714,0-1.291,0.578-1.291,1.291c0,0.151,0.03,0.295,0.078,0.431H2.878c0.048-0.136,0.079-0.279,0.079-0.431c0-0.713-0.579-1.291-1.292-1.291c-0.151,0-0.295,0.03-0.43,0.078V9.174c0.135,0.048,0.279,0.079,0.43,0.079c0.713,0,1.292-0.578,1.292-1.291c0-0.152-0.031-0.295-0.079-0.431h13.93C16.761,7.667,16.73,7.81,16.73,7.962c0,0.713,0.577,1.291,1.291,1.291c0.151,0,0.295-0.031,0.431-0.079V14.496z M18.021,8.392c-0.238,0-0.431-0.192-0.431-0.43c0-0.238,0.192-0.431,0.431-0.431s0.431,0.192,0.431,0.431C18.452,8.2,18.26,8.392,18.021,8.392 M15.438,14.418h-0.86c-0.238,0-0.431,0.192-0.431,0.43c0,0.238,0.192,0.431,0.431,0.431h0.86c0.238,0,0.431-0.192,0.431-0.431C15.869,14.61,15.677,14.418,15.438,14.418 M9.844,8.392c-1.901,0-3.443,1.542-3.443,3.443s1.542,3.443,3.443,3.443s3.443-1.542,3.443-3.443S11.745,8.392,9.844,8.392 M11.233,13.271c-0.071,0.162-0.169,0.297-0.292,0.403c-0.124,0.108-0.268,0.189-0.434,0.246c-0.166,0.058-0.295,0.089-0.488,0.097v0.4H9.673v-0.4c-0.208-0.004-0.35-0.037-0.522-0.099c-0.174-0.063-0.322-0.151-0.445-0.267s-0.219-0.257-0.286-0.424c-0.067-0.168-0.099-0.361-0.095-0.579h0.659c-0.003,0.256,0.052,0.459,0.168,0.608c0.115,0.147,0.257,0.226,0.522,0.233v-1.417c-0.158-0.042-0.265-0.094-0.422-0.154c-0.156-0.061-0.297-0.139-0.422-0.234c-0.125-0.095-0.226-0.215-0.303-0.36c-0.077-0.144-0.115-0.323-0.115-0.538c0-0.187,0.035-0.352,0.106-0.494c0.072-0.143,0.168-0.261,0.289-0.357c0.121-0.096,0.261-0.168,0.419-0.22C9.383,9.665,9.5,9.64,9.673,9.64V9.256h0.348V9.64c0.173,0,0.287,0.023,0.441,0.07c0.154,0.047,0.288,0.117,0.401,0.211c0.114,0.093,0.204,0.212,0.272,0.356c0.067,0.145,0.101,0.312,0.101,0.503h-0.659c-0.008-0.199-0.059-0.351-0.153-0.457c-0.095-0.105-0.197-0.158-0.404-0.158V11.4c0.173,0.048,0.293,0.103,0.459,0.165c0.166,0.062,0.312,0.142,0.439,0.239c0.127,0.098,0.229,0.219,0.306,0.363c0.077,0.144,0.116,0.321,0.116,0.532C11.341,12.919,11.305,13.109,11.233,13.271M10.458,12.332c-0.067-0.051-0.143-0.092-0.228-0.123c-0.085-0.031-0.123-0.06-0.21-0.082v1.363c0.208-0.016,0.329-0.076,0.462-0.185c0.133-0.107,0.199-0.277,0.199-0.512c0-0.109-0.02-0.2-0.061-0.275C10.581,12.444,10.526,12.383,10.458,12.332 M9.069,10.74c0,0.094,0.019,0.174,0.058,0.241c0.039,0.066,0.087,0.122,0.148,0.169c0.06,0.047,0.128,0.085,0.208,0.114s0.109,0.054,0.19,0.073v-1.171c-0.208,0-0.32,0.044-0.434,0.132C9.126,10.386,9.069,10.533,9.069,10.74"/>
+						</svg>
+				COMPANYNAME
+			</div>
+			<div class="header-search">
+				<input type="text" name="search" autocomplete="off" placeholder="Search...">
+			</div>
+			<div class="header-settings">
+				<div class="settings" id="settings">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path  d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z" />
+					</svg>
+				Settings
+			</div>
+			<a href="login.html" style="height: 100%;">
+			<div class="logout">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+				    <path d="M19,21V19H15V17H19V15L22,18L19,21M10,4A4,4 0 0,1 14,8A4,4 0 0,1 10,12A4,4 0 0,1 6,8A4,4 0 0,1 10,4M10,14C11.15,14 12.25,14.12 13.24,14.34C12.46,15.35 12,16.62 12,18C12,18.7 12.12,19.37 12.34,20H2V18C2,15.79 5.58,14 10,14Z" />
+				</svg>
+				Log out
+			</div>
+			</a> 
+		</div>
+		</div>
+		<div class="popup-settings" id="popup_settings">
+			
+			<input type="checkbox" class="darkmode_input" id="checkbox_dark_theme"><span>Dark-Mode</span>
+
+		</div>
+		<div class="sidebar" id="sidebar_block">
+			<div class="sidebar-in">
+				<div class="sidebar-profile">
+					<span class="sidebar-profile-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+						    <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+						</svg>
+					</span>
+					<span class="sidebar-profile-name">Michael Filenko</span>
+					<span class="sidebar-profile-role">Admin</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+					</svg>
+					<span>My Profile</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+					    <path d="M22,6V4L14,9L6,4V6L14,11L22,6M22,2A2,2 0 0,1 24,4V16A2,2 0 0,1 22,18H6C4.89,18 4,17.1 4,16V4C4,2.89 4.89,2 6,2H22M2,6V20H20V22H2A2,2 0 0,1 0,20V6H2Z" />
+					</svg>
+					<span>Mail</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19M9,14V16H7V14H9M13,14V16H11V14H13M17,14V16H15V14H17Z" />
+					</svg>
+					<span>Calendar</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						 <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+					</svg>
+					<span>Employees</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M17.45,15.18L22,7.31V19L22,21H2V3H4V15.54L9.5,6L16,9.78L20.24,2.45L21.97,3.45L16.74,12.5L10.23,8.75L4.31,19H6.57L10.96,11.44L17.45,15.18Z" />
+					</svg>
+					<span>Stats</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H8V4H20V16M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16M18.53,8.06L17.47,7L12.59,11.88L10.47,9.76L9.41,10.82L12.59,14L18.53,8.06Z" />
+					</svg>
+					<span>TO DO</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path  d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z" />
+					</svg>
+					<span>Settings</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H8V4H20V16M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16M18.53,8.06L17.47,7L12.59,11.88L10.47,9.76L9.41,10.82L12.59,14L18.53,8.06Z" />
+					</svg>
+					<span><a href="landing/landing.html">Landing</a></span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M6 3C3.79 3 2 4.79 2 7S3.79 11 6 11 10 9.21 10 7 8.21 3 6 3M6 9C4.9 9 4 8.1 4 7S4.9 5 6 5 8 5.9 8 7 7.1 9 6 9M6 13C3.79 13 2 14.79 2 17S3.79 21 6 21 10 19.21 10 17 8.21 13 6 13M12 5H22V7H12V5M12 19V17H22V19H12M12 11H22V13H12V11Z" />
+					</svg>
+					<span>Orders</span>
+				</div>
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M18.72,14.76C19.07,13.91 19.26,13 19.26,12C19.26,11.28 19.15,10.59 18.96,9.95C18.31,10.1 17.63,10.18 16.92,10.18C13.86,10.18 11.15,8.67 9.5,6.34C8.61,8.5 6.91,10.26 4.77,11.22C4.73,11.47 4.73,11.74 4.73,12A7.27,7.27 0 0,0 12,19.27C13.05,19.27 14.06,19.04 14.97,18.63C15.54,19.72 15.8,20.26 15.78,20.26C14.14,20.81 12.87,21.08 12,21.08C9.58,21.08 7.27,20.13 5.57,18.42C4.53,17.38 3.76,16.11 3.33,14.73H2V10.18H3.09C3.93,6.04 7.6,2.92 12,2.92C14.4,2.92 16.71,3.87 18.42,5.58C19.69,6.84 20.54,8.45 20.89,10.18H22V14.67H22V14.69L22,14.73H21.94L18.38,18L13.08,17.4V15.73H17.91L18.72,14.76M9.27,11.77C9.57,11.77 9.86,11.89 10.07,12.11C10.28,12.32 10.4,12.61 10.4,12.91C10.4,13.21 10.28,13.5 10.07,13.71C9.86,13.92 9.57,14.04 9.27,14.04C8.64,14.04 8.13,13.54 8.13,12.91C8.13,12.28 8.64,11.77 9.27,11.77M14.72,11.77C15.35,11.77 15.85,12.28 15.85,12.91C15.85,13.54 15.35,14.04 14.72,14.04C14.09,14.04 13.58,13.54 13.58,12.91A1.14,1.14 0 0,1 14.72,11.77Z" />
+					</svg>
+					<span>Support</span>
+				</div>
+				<a href="login.html" style="height: 100%;">
+				<div class="sidebar-item">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+   						<path d="M19,21V19H15V17H19V15L22,18L19,21M10,4A4,4 0 0,1 14,8A4,4 0 0,1 10,12A4,4 0 0,1 6,8A4,4 0 0,1 10,4M10,14C11.15,14 12.25,14.12 13.24,14.34C12.46,15.35 12,16.62 12,18C12,18.7 12.12,19.37 12.34,20H2V18C2,15.79 5.58,14 10,14Z" />
+					</svg>
+					<span>Log out</span>
+				</div>
+			</a>
+
+			</div>
+		</div>
+		<div class="content-wrap" id="content_block">
+			<p>Welcome, Michael!</p>
+			<div class="content">
+				
+				<div class="content-block">
+					<h4>Orders</h4>
+					<div class="content-block-in">
+						<div id="chart1"></div>
+					</div>
+					
+				</div>
+				
+				<div class="content-block">
+					<h4>Schedule</h4>
+					<div class="content-block-in">
+						<div class="chart2" id="chart2"></div>						
+					</div>
+					<div class="chart2-select-menu">
+						<span>Choose employee:</span>
+						<select name="employees" id="select_empl">
+							<option>George Bush</option>
+							<option>Jackie Chan</option>
+							<option>Michael Filenko</option>
+							<option>John White</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="content-block">
+					<h4>Chat</h4>
+					<div id="chat" class="chat">
+						<div class="contacts" id="contacts">
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Michael Filenko</span>
+								<span class="status">
+									<svg height="24" width="24">
+
+										<circle cx="12" cy="14" r="4" fill="#35ff26"> 
+											<animate attributeName="r" values="4;3;4" repeatCount="indefinite" dur="1.5s"/>
+										</circle><circle cx="12" cy="14" r="1" fill="#d0ffcc"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Jackie Chan</span>
+								<span class="status">
+									<svg height="24" width="24">
+
+										<circle cx="12" cy="14" r="4" fill="#35ff26"> 
+											<animate attributeName="r" values="4;3;4" repeatCount="indefinite" dur="1.5s"/>
+										</circle><circle cx="12" cy="14" r="1" fill="#d0ffcc"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">George Bush</span>
+								<span class="status">
+									<svg height="24" width="24">
+
+										<circle cx="12" cy="14" r="4" fill="#dbaf00"> 
+										</circle>
+										<circle cx="12" cy="14" r="1" fill="#fff"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">John White</span>
+								<span class="status">
+									<svg height="24" width="24">
+
+										<circle cx="12" cy="14" r="4" fill="#dbaf00"> 
+										</circle>
+										<circle cx="12" cy="14" r="1" fill="#fff"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Donald Trump</span>
+								<span class="status">
+									<svg height="24" width="24">
+
+										<circle cx="12" cy="14" r="4" fill="#dbaf00"> 
+										</circle>
+										<circle cx="12" cy="14" r="1" fill="#fff"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Bobby Burger</span>
+								<span class="status">
+									<svg height="24" width="24">
+										<circle cx="12" cy="14" r="4" fill="#c2c2c2"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Random Name</span>
+								<span class="status">
+									<svg height="24" width="24">
+										<circle cx="12" cy="14" r="4" fill="#c2c2c2"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Michael Filenko</span>
+								<span class="status">
+									<svg height="24" width="24">
+										<circle cx="12" cy="14" r="4" fill="#c2c2c2"/>
+									</svg>
+								</span>
+							</div>
+							<div class="contact">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								    <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+								</svg>
+								<span class="contact-name">Michael Filenko</span>
+								<span class="status">
+									<svg height="24" width="24">
+										<circle cx="12" cy="14" r="4" fill="#c2c2c2"/>
+									</svg>
+								</span>
+							</div>
+						</div>
+						<div class="dialog" id="dialog">
+							<div class="messages" id="wrapper_msgs">
+								<div class="message-wrap-left">
+									<div class="message">
+										<span class="message-name">George Bush</span>
+										<span class="message-text">Hello!</span>
+									</div>
+								</div>
+								
+								<div class="message-wrap-right">
+									<div class="message">
+										<span class="message-name">Jackie Chan</span>
+										<span class="message-text">Hi</span>
+									</div>
+								</div>
+								<div class="message-wrap-left">
+									<div class="message">
+										<span class="message-name">George Bush</span>
+										<span class="message-text">Wtf, man?</span>
+									</div>
+								</div>
+								<div class="message-wrap-right">
+									<div class="message">
+										<span class="message-name">Jackie Chan</span>
+										<span class="message-text">LOL</span>
+									</div>
+								</div>
+								<div class="message-wrap-right">
+									<div class="message">
+										<span class="message-name">Jackie Chan</span>
+										<span class="message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+									</div>
+								</div>
+								<div class="message-wrap-left">
+									<div class="message">
+										<span class="message-name">George Bush</span>
+										<span class="message-text">Nice</span>
+									</div>
+								</div>
+								<div class="message-wrap-right">
+									<div class="message">
+										<span class="message-name">Jackie Chan</span>
+										<span class="message-text">Thx:)</span>
+									</div>
+								</div>
+							</div>							
+						</div>
+
+						<div class="dialog-footer">
+							<textarea id="msg" name="message" placeholder="Try to send something:"></textarea>
+							<button class="send" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="content-block">
+					<h4>To-Do</h4>
+					<div class="todo-list">
+						<ul>
+							<li><input type="checkbox" class="check"><span>Task #1</span></li>
+							<li><input type="checkbox" class="check"><span>Task #2</span></li>
+							<li><input type="checkbox" class="check"><span>Task #3</span></li>
+							<li><input type="checkbox" class="check"><span>Task #4</span></li>
+							<li><input type="checkbox" class="check"><span>Task #5</span></li>
+							<li><input type="checkbox" class="check"><span>Task #6</span></li>
+							<li><input type="checkbox" class="check"><span>Task #7</span></li>
+							<li><input type="checkbox" class="check"><span>Task #8</span></li>
+							<li><input type="checkbox" class="check"><span>Task #9</span></li>
+							<li><input type="checkbox" class="check"><span>Task#10</span></li>
+							<li><input type="checkbox" class="check"><span>Task#11</span></li>
+						</ul>
+												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
