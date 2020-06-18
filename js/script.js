@@ -36,7 +36,7 @@ var content_blocks = document.getElementsByClassName("content-block");
 var contacts = document.getElementById("contacts");
 var contact_blocks = document.getElementsByClassName("contact");
 var message_blocks = document.getElementsByClassName("message");
-
+var checkboxes = document.querySelectorAll("input[type='checkbox']");
 
 
 //darktheme
@@ -49,6 +49,9 @@ checkbox.addEventListener( 'change', function() {
         send.classList.add("send-light");
         for (i = 0; i < sidebar_items.length; i++) {
 		  sidebar_items[i].classList.add("sidebar-item-light");
+		}
+		for (i = 0; i < checkboxes.length; i++) {
+		  checkboxes[i].classList.add("check-light");
 		}
 		for (i = 0; i < content_blocks.length; i++) {
 		  content_blocks[i].classList.add("content-block-light");
@@ -75,19 +78,38 @@ checkbox.addEventListener( 'change', function() {
 
 
     } else {
-    	content_block.classList.remove("content-wrap-light");
+    	console.log("Switch Dark");
+        content_block.classList.remove("content-wrap-light");
         sidebar_block.classList.remove("sidebar-light");
+        contacts.classList.remove("contacts-light");
+        send.classList.remove("send-light");
         for (i = 0; i < sidebar_items.length; i++) {
 		  sidebar_items[i].classList.remove("sidebar-item-light");
+		}
+		for (i = 0; i < checkboxes.length; i++) {
+		  checkboxes[i].classList.remove("check-light");
 		}
 		for (i = 0; i < content_blocks.length; i++) {
 		  content_blocks[i].classList.remove("content-block-light");
 		}
+
+		for (i = 0; i < message_blocks.length; i++) {
+		  message_blocks[i].classList.remove("message-light");
+		}
+
+		for (i = 0; i < contact_blocks.length; i++) {
+		  contact_blocks[i].classList.remove("contact-light");
+		}
+
 		for (i = 0; i < selects.length; i++) {
 		  selects[i].style.backgroundColor = "#2c3e50";
 		  selects[i].style.color = "#fff";
 		}
-        console.log("Switch Dark");
+
+		for (i = 0; i < textarea.length; i++) {
+		  textarea[i].style.backgroundColor = "inherit";
+		  textarea[i].style.color = "#fff";
+		}
     }
 });
 

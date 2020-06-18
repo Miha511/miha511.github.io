@@ -480,6 +480,10 @@ select{
 	margin-right: 10px;
 }
 
+.check:hover {
+	cursor: pointer;
+}
+
 .check:checked {
 	background-color: #e9ecee;
 	border: 1px solid #adb8c0;
@@ -488,7 +492,14 @@ select{
 }
 
 
+.check-light {
+	border: 1px solid #cacece;
+}
 
+.check-light:checked {
+	background-color: #373737;
+	border: 1px solid #3e3e3e;
+}
 
 .sidebar-light {
 	background-color: #c9f0ff;
