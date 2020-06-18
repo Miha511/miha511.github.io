@@ -23,16 +23,15 @@ select{
 	  border: 0 !important;
 	  position: relative;
 	  display: flex;
-	  height: 3em;
 	  line-height: 3;
 	  background: #2c3e50;
 	  overflow: hidden;
 	  border-radius: .25em;
 	  flex: 0.5;
-	  padding: 0 .5em;
+	  padding: 0 1em;
 	  color: #fff;
 	  cursor: pointer;
-	  font-size: 12pt;
+	  font-size: 11pt;
 }
 .chart2-select-menu{
 	display: flex;
@@ -72,7 +71,7 @@ select{
 	height: 50%;
 	border-radius: 40px;
 	padding-left: 10px;
-	border: 1px solid #2d417a;
+	border: 1px solid #5169ad;
 	background-color: #688efc;
 	color: black;
 	width: 100%;
@@ -502,7 +501,7 @@ select{
 }
 
 .sidebar-light {
-	background-color: #c9f0ff;
+	background-color: #cad5d9;
 	color: #373737;
 }
 .content-wrap-light{
@@ -536,7 +535,7 @@ select{
 }
 
 .contacts-light {
-	background-color: #c9f0ff;
+	background-color: #cad5d9;
 	color: white;
 	font-size: 12pt;
 	overflow-y: scroll;
@@ -545,11 +544,11 @@ select{
 }
 .contact-light:hover{
 	cursor: pointer;
-	background-color: #9ccadb;
+	background-color: #abcdd9;
 }
 
 .message-light {
-	background-color: #9ccadb;
+	background-color: #abcdd9;
 	color: #383838;
 }
 
@@ -560,6 +559,16 @@ select{
 
 .send-light:hover{
 	background-color: #9ccadb;
+}
+
+.chat-light{
+	border:1px solid #bdbdbd;
+}
+
+.popup-light {
+	background-color: #abcdd9;
+	border: 1px solid #9ccadb;
+	color: black;
 }
 
 @media only screen  

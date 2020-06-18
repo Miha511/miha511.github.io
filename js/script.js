@@ -37,7 +37,7 @@ var contacts = document.getElementById("contacts");
 var contact_blocks = document.getElementsByClassName("contact");
 var message_blocks = document.getElementsByClassName("message");
 var checkboxes = document.querySelectorAll("input[type='checkbox']");
-
+var chat = document.getElementById("chat");
 
 //darktheme
 checkbox.addEventListener( 'change', function() {
@@ -47,6 +47,8 @@ checkbox.addEventListener( 'change', function() {
         sidebar_block.classList.add("sidebar-light");
         contacts.classList.add("contacts-light");
         send.classList.add("send-light");
+        chat.classList.add("chat-light");
+        setblock.classList.add("popup-light");
         for (i = 0; i < sidebar_items.length; i++) {
 		  sidebar_items[i].classList.add("sidebar-item-light");
 		}
@@ -66,7 +68,7 @@ checkbox.addEventListener( 'change', function() {
 		}
 
 		for (i = 0; i < selects.length; i++) {
-		  selects[i].style.backgroundColor = "#c9f0ff";
+		  selects[i].style.backgroundColor = "#cad5d9";
 		  selects[i].style.color = "#000";
 		}
 
@@ -82,6 +84,7 @@ checkbox.addEventListener( 'change', function() {
         content_block.classList.remove("content-wrap-light");
         sidebar_block.classList.remove("sidebar-light");
         contacts.classList.remove("contacts-light");
+        setblock.classList.remove("popup-light");
         send.classList.remove("send-light");
         for (i = 0; i < sidebar_items.length; i++) {
 		  sidebar_items[i].classList.remove("sidebar-item-light");
